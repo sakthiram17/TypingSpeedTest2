@@ -1,0 +1,22 @@
+.Result{
+  
+    margin: auto;
+    color:white;
+}
+.ReloadButton{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    top:-10%;
+    color:whitesmoke;
+    font-size: 20px;
+    transition: 0.15s;
+    display: block;
+    margin: auto;
+}
+
+.ReloadButton:hover {
+    color:#fca311;
+    transform: scale(1.2);
+}

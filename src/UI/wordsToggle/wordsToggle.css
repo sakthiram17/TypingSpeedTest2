@@ -1,0 +1,30 @@
+.WordsToggler{
+    padding: 20px;
+    font-size: 20px;
+    
+    display:inline;
+}
+.WordsToggler ul{
+    text-decoration: none;
+    display: inline;
+}
+.ToggleElement{
+    color: whitesmoke;
+    display: inline;
+    padding: 0.25em 1em;
+   transition: 0.15s;
+   float: right;
+   margin-right: 10px;
+
+  
+}
+.ToggleElement:hover,.ToggleElement:focus{
+    color:#d60061;
+   transform: scale(1.2);
+   -webkit-transform: scale(1.2);
+   -moz-transform: scale(1.2);
+   -o-transform: scale(1.2);
+}
+ .Active{
+     color:#d60061;
+ }

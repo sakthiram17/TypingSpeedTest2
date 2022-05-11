@@ -1,0 +1,27 @@
+.GeneratedTextBox{
+    position: absolute;
+    color:white;
+    width: min(50vw,800px);
+    height: min(30vw,300px);
+    border-radius: 10px;
+    top:0;
+    left:0;
+    padding: 10px;
+    opacity: 0.7;
+    font-size: 20px;
+    text-align: left;
+    font-family: Verdana, Geneva, sans-serif;
+                font-size:20px;
+            display: block;
+        }
+.Completed{
+    color:green;
+}
+.Letter{
+    color:whitesmoke;
+}
+.Wrong{
+    color:red;
+    font-weight: bold;
+
+}

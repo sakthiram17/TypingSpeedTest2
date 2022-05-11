@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './UI/Navbar/Navbar';
+import SpeedTest from './SpeedTest/SpeedTest';
+import Card from './UI/Card/Card';
+import { useState } from 'react';
+import Modal from './UI/Modal/Modal';
+const navList = [];
 function App() {
+  const [textLength,changeLength] = useState(50);
+  const onLengthChangeHandler = (value)=>{
+    changeLength(value)
+  
+       }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar list= {navList} header="TypingSpeedTest" 
+      textLength = {textLength}
+      clicked = {onLengthChangeHandler}
+      
+      
+      ></Navbar>
+      <SpeedTest length={textLength}></SpeedTest>
+     <Modal isLoading></Modal>
     </div>
   );
 }

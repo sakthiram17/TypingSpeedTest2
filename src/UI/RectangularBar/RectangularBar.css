@@ -1,0 +1,16 @@
+.RectangularBar{
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    height: 300px;
+    width: 150px;
+    border-radius: 10px;
+    width: 50%;
+    opacity: 0.7;
+}
+.RectangularBar span{
+    margin: auto;
+    font-size: 15px;
+    font-weight: 800;
+}

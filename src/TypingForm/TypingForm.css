@@ -1,0 +1,69 @@
+.TypingForm{
+    width: min(70vw,800px);
+    height: min(30vw,300px);
+    display: block;
+    margin: auto;
+    top:0px;
+
+    margin-top: 50px;
+    transition: 0.15s;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 50px;
+   padding: 0px;
+   color:white;
+   
+}
+.TypingForm button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    top:-10%;
+    color:whitesmoke;
+    font-size: 20px;
+    transition: 0.15s;
+}
+.TypingForm button:hover{
+    color:#fca311;
+    transform: scale(1.2);
+}
+.TypingForm:hover{
+
+}
+.TextArea:focus{
+    background-color: aliceblue;
+    box-sizing: content-box;
+    outline:none;
+}
+
+.TextArea{
+    border-radius: 10px;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+   top:0;
+   left: 0;
+   padding: 10px;
+    color:black;
+    position: relative;
+    padding: 10px;
+    opacity: 0.1;
+    cursor: pointer;
+    border: none;
+    line-height: normal;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+    word-spacing: normal;
+    font-family: Verdana, Geneva, sans-serif;
+                font-size:20px;
+                display: block;
+}
+textarea{
+    background-color: none;
+    color:white;
+}
+.TextArea:focus{
+    background-color: black;
+    box-shadow: 0 3px 4px #ccc;
+    opacity: 0.2;
+}
