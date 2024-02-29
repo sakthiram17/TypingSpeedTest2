@@ -9,22 +9,21 @@
     display: inline;
 }
 .ToggleElement{
-    color: whitesmoke;
-    display: inline;
+    color: var(--accent-color);
+    display: inline-flex;
     padding: 0.25em 1em;
    transition: 0.15s;
-   float: right;
    margin-right: 10px;
-
+   border-radius: 0.2rem;
   
 }
 .ToggleElement:hover,.ToggleElement:focus{
-    color:#d60061;
-   transform: scale(1.2);
-   -webkit-transform: scale(1.2);
-   -moz-transform: scale(1.2);
-   -o-transform: scale(1.2);
+   background-color: var(--accent-color);
+   color:white;
+   transform:translateY(-10px)
+
 }
  .Active{
-     color:#d60061;
+    background-color: var(--accent-color);
+   color:white;
  }

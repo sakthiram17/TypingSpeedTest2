@@ -6,14 +6,12 @@
     border-radius: 10px;
     top:0;
     left:0;
+    font-size: 1.2rem;
     padding: 10px;
-    opacity: 0.7;
-    font-size: 20px;
-    text-align: left;
-    font-family: Verdana, Geneva, sans-serif;
-                font-size:20px;
-            display: block;
-        }
+}
+.current-word{
+    font-size: 1.5rem;
+}
 .Completed{
     color:green;
 }
@@ -23,5 +21,12 @@
 .Wrong{
     color:red;
     font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
 
+}
+.to-be-typed{
+    font-size: 1.7rem;
+    text-decoration: underline;
+    
 }

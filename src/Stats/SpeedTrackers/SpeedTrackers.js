@@ -3,6 +3,7 @@ import Container from "../../UI/Container/Container";
 import RectangularBar from "../../UI/RectangularBar/RectangularBar";
 import Card from "../../UI/Card/Card";
 import Result from "../../Result/Result";
+import Guage from "../../UI/Guage";
 const SpeedTrackers = (props)=>{
      
     return(
@@ -13,29 +14,22 @@ const SpeedTrackers = (props)=>{
        header = "Speed Stats"
        
        ></Card>
-<RectangularBar
-      height = "250px"
-      width = "80px"
-      c1 = "#fca311"
-      c2 = "whitesmoke"
-      direction = "top"
-      level = {props.completion||10}
-      text = "Completion"
+
+      <Guage 
+      value = {parseInt(props.wpm)}
+      max = {200}
+      unit = " WPM"
       >
 
-      </RectangularBar>
-      <RectangularBar
-      height = "250px"
-      width = "80px"
-      c1 = "#00bfff"
-      c2 = "whitesmoke"
-      direction = "top"
-      level = {(props.wpm/150)*100||10}
-      text = "WPM"
+      </Guage>
+      <Guage 
+      value = {parseFloat(props.completion).toFixed(2) ||0}
+      max = {200}
+      unit = " %"
+      type
       >
 
-      </RectangularBar>
-
+      </Guage>
         </Container>
     )
 }

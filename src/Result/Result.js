@@ -27,7 +27,7 @@ let t2 = []
  t1.push(props.points[i][0]);
  t2.push(props.points[i][1]);
     }
-    console.log(t1)
+
   
    
     return(

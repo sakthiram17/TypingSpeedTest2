@@ -1,17 +1,23 @@
-.Container{
-border-radius: 10px;
-box-shadow: 0 5px 8px #1f2439 inset;
-width: min(80vw,1000px);
-padding: 10px;
-overflow: auto;
-font-size: 20px;
-color:white;
-margin: auto;
-background-color:rgba(240, 240, 240, 0.2);
-z-index: 50;
-margin-top: 100px;
-transition: 0.15s;
+.Container {
+  border-radius: 10px;
+  width: min(80vw, 1000px);
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  margin: auto;
+  background-color: var(--primary-card-bg);
+  z-index: 50;
+  margin-top: 100px;
+  transition: 0.15s;
+  box-shadow: #00000080 2px 2px 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+
 }
-.Container:hover{
-    transform: scale(1.1);
+.Container:hover {
+  transform: scale(1.01);
 }
