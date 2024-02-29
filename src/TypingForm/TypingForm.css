@@ -84,7 +84,7 @@ textarea{
     overflow: hidden;
 }
 .typing-container{
-    background-color: var(--primary-card-bg);
+
     display: flex;
     margin:auto;
     margin-top: 50px;
@@ -94,6 +94,8 @@ textarea{
     justify-content: center;
     align-items:center;
     flex-direction: column;
+    width: min(80vw,800px);
+
 }
 #wordsInput:focus{
     background-color: black;

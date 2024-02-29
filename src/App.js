@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar list= {navList} first = {"Typing"}
-      last = "SpeedTest" 
+      <Navbar list= {navList} first = "Typing"
+      last = "SpeedTest"
       textLength = {textLength}
       clicked = {onLengthChangeHandler}
       

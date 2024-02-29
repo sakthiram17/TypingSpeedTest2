@@ -1,8 +1,8 @@
 .GeneratedTextBox{
     position: absolute;
     color:white;
-    width: min(50vw,800px);
-    height: min(30vw,300px);
+    width: min(80vw,800px);
+    height: min(90vw,1200px);
     border-radius: 10px;
     top:0;
     left:0;

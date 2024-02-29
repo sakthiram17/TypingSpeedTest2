@@ -29,6 +29,8 @@ const SpeedTest = (props) => {
   const [wpm, setWpm] = useState(0);
   const [wrongPos, setWrongPos] = useState(0);
   const [WrongText, setWrongText] = useState("");
+  const [totalPoints ,setTotalPoints ] = useState([]);
+
   let result = null;
   let maxlength = 0;
 
@@ -97,6 +99,9 @@ const SpeedTest = (props) => {
     setWpm(((l / time) * 60) / 5);
     if (isFinite(wpm)) {
       if (!isPrsent(speedTrackedList, time)) {
+        let prev = [...totalPoints]
+        prev.push([time,wpm])
+        setTotalPoints(prev)
         speedTrackedList.push([time, wpm]);
       }
     }
@@ -119,10 +124,10 @@ const SpeedTest = (props) => {
       onClick={reloadState}
     ></TypingForm>
   );
-  if (submitForm) {
-    result = <Result onClick={reloadState} points={speedTrackedList}></Result>;
-    typingform = null;
-  }
+
+
+    
+
   return (
     <div>
       <SpeedTrackers
@@ -141,7 +146,7 @@ const SpeedTest = (props) => {
         points={speedTrackedList}
       ></SpeedTrackers>
       {typingform}
-      {result}
+      <Result onClick={reloadState} points={totalPoints}></Result>;
     </div>
   );
 };
