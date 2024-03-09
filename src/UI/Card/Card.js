@@ -6,7 +6,7 @@ let dispCard = null;
 let newEleList = [];
 for(let i = 0;i<props.text.length;i++)
 {
-newEleList.push(<div key ={i+1}className="CardElement">{props.text[i]} : {props.value[i]}</div>)
+newEleList.push(<div key ={i+1}className="CardElement">{props.text[i]} : {props.value[i]} {props.unit?props.unit[i]:null}</div>)
 }
 return(
     <div className="Card">

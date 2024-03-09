@@ -41,23 +41,10 @@ const TypingForm = (props) => {
           onCopy="return false" onCut="return false" onPaste={handlePaste}
         ></input>
         <div>
-        <button style={{
-            outline :'none',
-            border :'none'
-
-        }}>
-          <FontAwesomeIcon
-            icon={faRefresh}
-            onClick={props.onClick}
-            style ={{
-                color:'var(--accent-color)',
-                backgroundColor:'transparent'
-            }}
-          ></FontAwesomeIcon>
-        </button>
+       
         </div>
       </div>
-
+      
       </div>
   );
 

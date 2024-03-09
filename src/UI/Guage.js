@@ -7,6 +7,7 @@ const Guage = (props)=>{
     }
     return(
         <div className="widget">
+            <div className="header">{props.title}</div>
         <div className={props&& props.type?'gauge  gauge-2':'gauge '}
         style = {style}
 

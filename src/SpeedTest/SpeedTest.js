@@ -3,6 +3,8 @@ import TypingForm from "../TypingForm/TypingForm";
 import random_words_str from "../GeneratedText/RandomWordsList";
 import SpeedTrackers from "../Stats/SpeedTrackers/SpeedTrackers";
 import Result from "../Result/Result";
+import { faRefresh } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Speedtest.css";
 let startTime = new Date();
 
@@ -34,9 +36,9 @@ const SpeedTest = (props) => {
   let result = null;
   let maxlength = 0;
 
-  const isPrsent = (array, ele) => {
+  const isPresent = (array, ele) => {
     for (let i = 0; i < array.length; i++) {
-      if (array[i][0] == ele) return true;
+      if (array[i].time == ele) return true;
     }
     return false;
   };
@@ -98,11 +100,19 @@ const SpeedTest = (props) => {
     }
     setWpm(((l / time) * 60) / 5);
     if (isFinite(wpm)) {
-      if (!isPrsent(speedTrackedList, time)) {
+      if (!isPresent(totalPoints, time)) {
         let prev = [...totalPoints]
-        prev.push([time,wpm])
+        prev.push({time : time,gwpm:wpm,accuracy:   (clength / totalKeyStrokes) * 100
+        ? ((clength / totalKeyStrokes) * 100).toFixed(2)
+        : 100,
+        wpm:(((clength + WrongText.length || 0) / time) * 60) / 5
+        ? ((((clength + WrongText.length || 0) / time) * 60) / 5).toFixed(2)
+        : 0
+      })
         setTotalPoints(prev)
-        speedTrackedList.push([time, wpm]);
+
+        
+        
       }
     }
 
@@ -129,12 +139,12 @@ const SpeedTest = (props) => {
     
 
   return (
-    <div>
+    <div className="main-container">
       <SpeedTrackers
         accuracy={
           (clength / totalKeyStrokes) * 100
             ? ((clength / totalKeyStrokes) * 100).toFixed(2)
-            : 0
+            : 100
         }
         wpm={
           (((clength + WrongText.length || 0) / time) * 60) / 5
@@ -143,9 +153,20 @@ const SpeedTest = (props) => {
         }
         gwpm={wpm ? wpm.toFixed(2) : null}
         completion={(clength / text.length) * 100}
-        points={speedTrackedList}
+        points={totalPoints}
       ></SpeedTrackers>
+          <button  className = 'ReloadButton'>
+              <FontAwesomeIcon
+                icon={faRefresh}
+                onClick={props.onClick}
+                style ={{
+                    color:'var(--accent-color)',
+                    backgroundColor:'transparent'
+                }}
+              ></FontAwesomeIcon>
+            </button>
       {typingform}
+
       <Result onClick={reloadState} points={totalPoints}></Result>;
     </div>
   );
